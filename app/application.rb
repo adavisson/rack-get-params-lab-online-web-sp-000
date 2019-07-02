@@ -41,7 +41,11 @@ class Application
   end
   
   def cart_search(item)
-    
+    if @@items.include?(item)
+      @@cart << item
+    else
+      "Error"
+    end
   end
   
 end
