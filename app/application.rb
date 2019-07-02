@@ -22,6 +22,9 @@ class Application
           resp.write "#{item}\n"
         end
       end
+    elsif req.path.match(/add/)
+      item_search = req.params("item")
+      cart_search(item_search)
     else
       resp.write "Path Not Found"
     end
@@ -36,4 +39,9 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
+  
+  def cart_search(item)
+    
+  end
+  
 end
