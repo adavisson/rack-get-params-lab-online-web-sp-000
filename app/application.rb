@@ -23,7 +23,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item_search = req.params("item")
+      item_search = req.params["item"]
       cart_search(item_search)
     else
       resp.write "Path Not Found"
