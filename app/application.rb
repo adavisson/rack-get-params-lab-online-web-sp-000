@@ -43,6 +43,7 @@ class Application
   def cart_search(item)
     if @@items.include?(item)
       @@cart << item
+      "added #{item}"
     else
       "Error"
     end
